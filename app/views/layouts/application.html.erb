@@ -16,6 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <%= link_to 'Simple Airbnb', root_path, class: 'navbar-brand' %>
+      <%= link_to 'Add Flat', new_flat_path, class: 'btn btn-primary my-2 my-sm-0 ml-2' %>
     </nav>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
