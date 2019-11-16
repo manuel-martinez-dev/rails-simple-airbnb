@@ -1,4 +1,5 @@
 class FlatsController < ApplicationController
+  before_action :set_flat, only: [:show, :edit, :update, :destroy]
   def index
     if params[:query].present?
       @query = params[:query]
@@ -9,11 +10,10 @@ class FlatsController < ApplicationController
   end
 
   def new
-    @flats = Flat.new
+    @flat = Flat.new
   end
 
   def show
-    @flat = Flat.all
   end
 
   def create
@@ -40,6 +40,10 @@ class FlatsController < ApplicationController
   end
 
   private
+
+  def set_flat
+    @flat = Flat.find(params[:id])
+  end
 
   def flat_params
     params.require(:flat).permit(:name,
