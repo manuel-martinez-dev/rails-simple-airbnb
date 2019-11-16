@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# webpack
+gem 'webpacker', '~> 4.x'
 # front-end
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
